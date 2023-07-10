@@ -1,10 +1,10 @@
-let spanResultSpan = document.querySelector(".container span .result");
+let spanResultSpan = document.querySelector(".container span");
 let spanPlaceholder = document.querySelector(
-    ".container span .span-placeholder"
+    ".container .span-placeholder"
 );
-let divResultSpan = document.querySelector(".container .result-div .result");
+let divResultSpan = document.querySelector(".container .result-div");
 let divPlaceholder = document.querySelector(
-    ".container .result-div .div-placeholder"
+    ".container .div-placeholder"
 );
 let btn = document.querySelector(".container .btn");
 

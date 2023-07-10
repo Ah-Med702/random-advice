@@ -44,8 +44,8 @@ body {
 }
 
 
-.container span .span-placeholder {
-    width: 200px;
+.container .span-placeholder {
+    width: 50%;
     height: 50px;
     background-color: #272e3a;
     border-radius: 10px;
@@ -60,8 +60,8 @@ body {
     position: relative;
 }
 
-.container .result-div .div-placeholder {
-    width: 450px;
+.container .div-placeholder {
+    width: 95%;
     height: 100px;
     background-color: #272e3a;
     border-radius: 10px;
@@ -130,11 +130,12 @@ body {
 
 @media (max-width: 550px) {
     .container {
-        width: 80%;
+        width: 85%;
         top: 30%;
     }
 
-    .container .result {
+    .container .result-div {
         font-size: 22px;
     }
+
 }
