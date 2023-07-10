@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,800&display=swap');
 
-:root{
+:root {
     --body-background: #1f2632;
     --container-background: #323a49;
     --neon-green: #52ffa8;
@@ -9,18 +9,18 @@
     /* --background-color: #4e5d73; */
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: var(--body-background);
     font-family: 'Poppins', sans-serif;
 }
 
-.container{
+.container {
     width: 500px;
     background-color: var(--container-background);
     padding: 20px;
@@ -36,21 +36,45 @@ body{
     transform: translate(-50%, -50%);
 }
 
-.container span{
+.container span {
     color: var(--neon-green);
     display: block;
     text-align: center;
     letter-spacing: 3px;
 }
 
-.container .result{
+
+.container span .span-placeholder {
+    width: 200px;
+    height: 50px;
+    background-color: #272e3a;
+    border-radius: 10px;
+    animation: change-color 2s infinite linear;
+}
+
+.container .result-div {
     color: var(--font-color);
     font-size: 28px;
     font-weight: 800;
     text-align: center;
+    position: relative;
 }
 
-.container .btn{
+.container .result-div .div-placeholder {
+    width: 450px;
+    height: 100px;
+    background-color: #272e3a;
+    border-radius: 10px;
+    animation: change-color 2s infinite linear;
+}
+
+@keyframes change-color {
+    50% {
+        background-color: #323a49;
+    }
+}
+
+.container .btn {
     height: 60px;
     width: 60px;
     background-color: var(--neon-green);
@@ -58,25 +82,25 @@ body{
     bottom: -30px;
     border-radius: 50%;
     text-align: center;
-    line-height: 75px;
+    line-height: 70px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.btn svg{
-    height: 30px;
+.container .btn i {
+    font-size: 28px;
     transition: 0.3s;
 }
 
-.container .btn:hover{
+.container .btn:hover {
     box-shadow: 0 0 40px var(--neon-green);
 }
 
-.container .btn:hover svg{
+.container .btn:hover i {
     rotate: 90deg;
 }
 
-.container .seperator{
+.container .seperator {
     color: var(--font-color);
     font-size: 28px;
     margin-bottom: 20px;
@@ -86,7 +110,7 @@ body{
 }
 
 .container .seperator::before,
-.container .seperator::after{
+.container .seperator::after {
     content: "";
     position: absolute;
     width: 40%;
@@ -96,20 +120,21 @@ body{
     background-color: #4e5d73;
 }
 
-.container .seperator::before{
+.container .seperator::before {
     left: 0;
 }
 
-.container .seperator::after{
+.container .seperator::after {
     right: 0;
 }
 
-@media (max-width: 550px){
-    .container{
+@media (max-width: 550px) {
+    .container {
         width: 80%;
         top: 30%;
     }
-    .container .result{
+
+    .container .result {
         font-size: 22px;
     }
 }
